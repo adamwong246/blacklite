@@ -1,6 +1,7 @@
 /* Invert the luminance iff any of the "delumine" styles are selected. */
 html[hc^="delumine"] {
   -webkit-filter: invert() hue-rotate(180deg) brightness(105%) contrast(105%);
+  -webkit-transform: translateZ(0); 
 }
 
 /* Override the above with a low-contrast version if selected. */
