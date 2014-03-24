@@ -9,6 +9,10 @@ html[hc^="delumine"][hc*="low-contrast"] {
   -webkit-filter: invert() hue-rotate(180deg) brightness(105%) contrast(85%);
 }
 
+html[hc^="delumine"] * {
+  -webkit-backface-visibility: hidden;
+}
+
 /* Uninvert select items within the document.
  * Note: Chrome clears -webkit-filter on all full-screen ancestor tags, killing
  * the top-level delumination filter. This is usually desirable (e.g., for
