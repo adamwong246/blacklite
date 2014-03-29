@@ -18,8 +18,8 @@
    "icons": {
       "128": "deluminate-128.png"
    },
-   "name": "Deluminate",
-   "manifest_version": 2,
+   "name": "Deluminate(adamwong246)",
+   "manifest_version": 1,
    "permissions": [ "\u003Call_urls\u003E", "tabs" ],
-   "version": "0.3.1"
+   "version": "0.0.1"
 }

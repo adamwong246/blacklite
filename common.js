@@ -99,6 +99,9 @@ function getModifiers() {
   if (isFlat()) {
     modifiers.push('flat');
   }
+  if (isNoBorder()) {
+    modifiers.push('no_border');
+  }
   return modifiers;
 }
 
@@ -119,6 +122,16 @@ function isFlat() {
     return (result === 'true');
   }
   localStorage['flat'] = 'false';
+  return false;
+}
+
+function isNoBorder() {
+  var result = localStorage['no_border'];
+
+  if (result === 'true' || result === 'false') {
+    return (result === 'true');
+  }
+  localStorage['no_border'] = 'false';
   return false;
 }
 

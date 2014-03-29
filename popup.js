@@ -34,6 +34,7 @@ function update() {
   }
   $('toggle_contrast').checked = isLowContrast();
   $('toggle_flat').checked = isFlat();
+  $('toggle_no_border').checked = isNoBorder();
   if (getEnabled()) {
     document.documentElement.setAttribute(
         'hc',
@@ -102,6 +103,10 @@ function init() {
     localStorage['flat'] = evt.target.checked;
     update();
   }, false);
+  $('toggle_no_border').addEventListener('change', function(evt) {
+    localStorage['no_border'] = evt.target.checked;
+    update();
+  }, false);
   $('toggle').addEventListener('click', onToggle, false);
   $('make_default').addEventListener('click', onMakeDefault, false);
   $('forget').addEventListener('click', onForget, false);
@@ -122,7 +127,7 @@ function init() {
           $('make_default').style.display = 'none';
         } else {
           site = siteFromUrl(tab.url);
-          $('scheme_title').innerHTML = 'Color scheme for <b>' + site +
+          $('scheme_title').innerHTML = 'Settings for <b>' + site +
               '</b>:<br><span class="kb">(' + key2 + ')</span>';
           $('make_default').style.display = 'block';
         }

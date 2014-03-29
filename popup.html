@@ -1,109 +1,108 @@
 <!doctype html>
 <html>
 <head>
-<title>Deluminate Pop-up</title>
-<link rel="stylesheet" type="text/css" href="deluminate.css" />
-<style type="text/css">
-html {
-  border-radius: 6px;
-}
-body {
-  width: 18em;
-  padding: 0.75em;
-  border-radius: 6px;
-}
-* {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 10pt;
-}
-#title {
-  outline: none;
-}
-.kb {
-  font-weight: normal;
-  font-style: italic;
-  font-size: 10pt;
-}
-button {
-  width: 100%;
-  margin: 0.75em 0 0.25em 0;
-  padding: 0.5em 1.5em;
-}
-button#toggle {
-  font-size: 12pt;
-}
-body.disabled h3,
-body.disabled a,
-body.disabled label {
-  color: #aaa;
-}
-h2 {
-  font-size: 12pt;
-  text-align: center;
-}
-label {
-  display: block;
-}
-fieldset {
-  border: none;
-  margin: 0;
-  margin-bottom: 1em;
-  padding: 0;
-}
-legend {
-  padding-top: 1em;
-  padding-bottom: 0.5em;
-}
-input[type="radio"] {
-  margin-left: 1em;
-}
-</style>
-<script type="text/javascript" src="common.js"></script>
-<script type="text/javascript" src="popup.js"></script>
+  <title>Deluminate Pop-up</title>
+  <link rel="stylesheet" type="text/css" href="deluminate.css" />
+  <style type="text/css">
+    html {
+      border-radius: 6px;
+    }
+
+    body {
+      width: 18em;
+      padding: 0.75em;
+      border-radius: 6px;
+      border: 1px solid black;
+      box-shadow: 1px 1px 5px black;
+    }
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10pt;
+    }
+    #title {
+      outline: none;
+    }
+    .kb {
+      font-weight: normal;
+      font-style: italic;
+      font-size: 10pt;
+    }
+    button {
+      width: 100%;
+      margin: 0.75em 0 0.25em 0;
+      padding: 0.5em 1.5em;
+    }
+    button#toggle {
+      font-size: 12pt;
+    }
+    body.disabled h3,
+    body.disabled a,
+    body.disabled label {
+      color: #aaa;
+    }
+    h2 {
+      font-size: 12pt;
+      text-align: center;
+    }
+    label {
+      display: block;
+    }
+    fieldset {
+      border: none;
+      margin: 0;
+      margin-bottom: 1em;
+      padding: 0;
+    }
+    legend {
+      padding-top: 1em;
+      padding-bottom: 0.5em;
+    }
+    input[type="radio"] {
+      margin-left: 1em;
+    }
+  </style>
+  <script type="text/javascript" src="common.js"></script>
+  <script type="text/javascript" src="popup.js"></script>
 </head>
-<body>
+  <body>
+    <h2 id="title" tabIndex="0"></h2>
+    <button id="toggle"></button>
+    <div id="subcontrols">
+      <fieldset>
+        <legend id="scheme_title"></legend>
+                <label>
+          <input type="radio" name="scheme" value="delumine-all">
+          Deluminate everything
+        </label>
+        <label>
+          <input type="radio" name="scheme" value="delumine-smart">
+          "Smart" deluminate images
+        </label>
+        <label>
+          <input type="radio" name="scheme" value="delumine-noimg">
+          Don't deluminate images
+        </label>
 
-<h2 id="title" tabIndex="0"></h2>
+        <label>
+          <input type="radio" name="scheme" value="normal">
+          Disable
+        </label>
 
-<button id="toggle"></button>
-
-<div id="subcontrols">
-
-  <fieldset>
-    <legend id="scheme_title"></legend>
-    <h3>Luminance</h3>
-    <label>
-      <input type="radio" name="scheme" value="normal">
-      Not Inverted
-    </label>
-    <label>
-      <input type="radio" name="scheme" value="delumine-smart">
-      Smart Invert Images
-    </label>
-    <label>
-      <input type="radio" name="scheme" value="delumine-all">
-      Invert All Images
-    </label>
-    <label>
-      <input type="radio" name="scheme" value="delumine-noimg">
-      Keep Images Normal
-    </label>
-  </fieldset>
-
-  <label>
-    <input type="checkbox" id="toggle_contrast">
-    Enable Low Contrast
-  </label>
-  <label>
-    <input type="checkbox" id="toggle_flat">
-    Flatten
-  </label>
-
-  <button id="make_default">Set as default scheme</button>
-
-  <button id="forget">Forget site customizations</button>
-
-</div>
-
-</body>
+      </fieldset>
+      <label>
+        <input type="checkbox" id="toggle_contrast">
+        Low contrast
+      </label>
+      <label>
+        <input type="checkbox" id="toggle_flat">
+        No shadows
+      </label>
+      <label>
+        <input type="checkbox" id="toggle_no_border">
+        No borders
+      </label>
+      <button id="make_default">Set as default scheme</button>
+      <button id="forget">Forget site customizations</button>
+    </div>
+  </body>
 </html>

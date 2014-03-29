@@ -1,31 +1,29 @@
-/* Invert the luminance iff any of the "delumine" styles are selected. */
 html[hc^="delumine"] {
   -webkit-filter: invert() hue-rotate(180deg) brightness(105%) contrast(105%);
-  -webkit-transform: translateZ(0); 
-}
-
-html[hc^="delumine"] img{
-  -webkit-transform: translateZ(0); 
-}
-
-/* Override the above with a low-contrast version if selected. */
-html[hc^="delumine"][hc*="low-contrast"] {
-  -webkit-filter: invert() hue-rotate(180deg) brightness(105%) contrast(85%);
 }
 
 html[hc*="low-contrast"] {
   -webkit-filter: contrast(85%);
 }
 
-html[hc*="low-contrast"] img{
-  -webkit-transform: translateZ(0); 
+html[hc^="delumine"][hc*="low-contrast"] {
+  -webkit-filter: invert() hue-rotate(180deg) brightness(105%) contrast(85%);
+}
+
+html[hc^="delumine"],
+html[hc*="low-contrast"] {
+  -webkit-transform: translateZ(0);
 }
 
 [hc*="flat"] *:not(.icon):not(i),
 [hc*="flat"] *:not(.icon):not(i):after,
 [hc*="flat"] *:not(.icon):not(i):before{
   box-shadow:none !important;
-  text-shadow:none !important;
+  text-shadow:none !important ;
+}
+
+[hc*="no_border"] *:not(.icon):not(i):not(textarea):not(input) {
+  border-color: transparent !important;
 }
 
 /* Uninvert select items within the document.
