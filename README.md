@@ -1,10 +1,20 @@
-Deluminate
-==========
+Deluminate, remixed
+===================
 
 An extension for Google Chrome (and Chromium) that inverts the luminance of
 websites to make them easier on the eyes.
 
-**Warning:** because of the way this extension inverts the luminance of
+Remix
+-----
+This is a slight fork of Deluminate
+https://github.com/abstiles/deluminate
+https://chrome.google.com/webstore/detail/deluminate/iebboopaeangfpceklajfohhbpkkfiaa?hl=en-US
+
+The vast majority of the work was done by https://github.com/abstiles. Please direct credit to him. Thanks Andrew!
+
+Warning
+-------
+Because of the way this extension inverts the luminance of
 rendered pages, it may cause noticeable slowdowns for some users. If this
 happens, you may prefer another extension that uses custom CSS to set the
 default background and text color of web pages.
@@ -45,3 +55,11 @@ The latest release is always available on the Chrome Web Store. Search for
 "Deluminate". The master branch always points to the latest Chrome Web Store
 release code. Check out the dev branch if you want to see the latest unreleased
 features, but only if you are willing to put up with more bugs.
+
+License
+-------
+
+Copyright © 2014 Adam Wong adamwong246@gmail.com
+This work is free. You can redistribute it and/or modify it under the
+terms of the Do What The Fuck You Want To Public License, Version 2,
+as published by Sam Hocevar. See the COPYING file for more details.

@@ -16,6 +16,10 @@ html[hc*="low-contrast"] {
   -webkit-filter: contrast(85%);
 }
 
+html[hc*="low-contrast"] img{
+  -webkit-transform: translateZ(0); 
+}
+
 [hc*="flat"] *:not(.icon):not(i),
 [hc*="flat"] *:not(.icon):not(i):after,
 [hc*="flat"] *:not(.icon):not(i):before{
