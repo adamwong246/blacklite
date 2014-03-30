@@ -123,12 +123,12 @@ function init() {
       var tab = window.tabs[i];
       if (tab.active) {
         if (isDisallowedUrl(tab.url)) {
-          $('scheme_title').innerText = 'Default color scheme:';
+          $('scheme_title').innerText = 'Default settings';
           $('make_default').style.display = 'none';
         } else {
           site = siteFromUrl(tab.url);
-          $('scheme_title').innerHTML = 'Settings for <b>' + site +
-              '</b>:<br><span class="kb">(' + key2 + ')</span>';
+          $('scheme_title').innerHTML = 'Setting for <b>' + site +
+              '</b><br><span class="kb">(' + key2 + ')</span>';
           $('make_default').style.display = 'block';
         }
         update();
