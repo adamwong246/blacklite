@@ -1,7 +1,7 @@
-# Deluminate
+# Blacklite
 An extension for Google Chrome (and Chromium) that, among other things, inverts the luminance of websites. 
 
-![](https://raw.githubusercontent.com/adamwong246/deluminate/master/screenshot.png)
+![](https://raw.githubusercontent.com/adamwong246/blacklite/master/screenshot.png)
 
 This is a fork of [the original Deluminate](https://github.com/abstiles/deluminate) with a few more bells and whistles.
 
